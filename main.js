@@ -14,6 +14,33 @@ const rl = readline.createInterface({
 const pigLatin = (word) => {
 
   // Your code here
+  let newWord = word.trim().toLowerCase()
+  
+  let arr = newWord.split('')
+  console.log('My array is', arr)
+
+  if(arr[0] === 'a' || arr[0] === 'e' || arr[0] === 'i' || arr[0] === 'o' || arr[0] === 'u'){
+    arr.push('yay')
+  console.log('***after adding yay',arr)
+
+  arr.join()
+  
+  return arr.join('')
+  } else {
+  let removedElement = arr.shift()
+  console.log(removedElement)
+
+  
+  arr.push(removedElement)
+  console.log('***after putting at the end',arr)
+
+  arr.push('ay')
+  console.log('***after adding ay',arr)
+
+  arr.join()
+  
+  return arr.join('')
+}
 
 }
 
