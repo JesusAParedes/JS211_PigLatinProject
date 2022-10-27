@@ -27,6 +27,10 @@ const pigLatin = (word) => {
   
   return arr.join('')
   } else {
+    let i = 0;
+    while (arr[i] !== 'a' || arr[i] !== 'e' || arr[i] !== 'i' || arr[i] !== 'o' || arr[i] !== 'u') {
+      i+=1;
+      console.log(arr[i])
   let removedElement = arr.shift()
   console.log(removedElement)
 
@@ -34,14 +38,18 @@ const pigLatin = (word) => {
   arr.push(removedElement)
   console.log('***after putting at the end',arr)
 
+      if(arr[0] === 'a' || arr[0] === 'e' || arr[0] === 'i' || arr[0] === 'o' || arr[0] === 'u'){
+        break;
+      }
+
+}
   arr.push('ay')
   console.log('***after adding ay',arr)
 
   arr.join()
   
   return arr.join('')
-}
-
+  }
 }
 
 // the first function called in the program to get an input from the user
