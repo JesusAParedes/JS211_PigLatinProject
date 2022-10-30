@@ -23,18 +23,16 @@ const pigLatin = (word) => {
   if(arr[0] === 'a' || arr[0] === 'e' || arr[0] === 'i' || arr[0] === 'o' || arr[0] === 'u'){
     arr.push('yay') // addes "yay" at the end of words that start with vowels
   // console.log('***after adding yay',arr)
-
   arr.join() 
-  
   return arr.join('')
-  } // second is a while loop where the word that starts with a consonant goes through until it gets to a vowel
+  } 
+  // second is a while loop where the word that starts with a consonant goes through until it gets to a vowel
   else {
     let i = 0;
     while (i+=1) {
       // console.log(arr[i])
   let removedElement = arr.shift() // if the letter at index 0 is a consonant, remove it and store the element in a variable
   console.log(removedElement)
-
   arr.push(removedElement) // put the removedElement at the end of the array
   // console.log('***after putting at the end',arr)
       if(arr[0] === 'a' || arr[0] === 'e' || arr[0] === 'i' || arr[0] === 'o' || arr[0] === 'u'){
