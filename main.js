@@ -16,38 +16,34 @@ const pigLatin = (word) => {
   // Your code here
   let newWord = word.trim().toLowerCase()
   
-  let arr = newWord.split('')
-  console.log('My array is', arr)
+  let arr = newWord.split('') // create an array of the word
+  // console.log('My array is', arr)
 
+  // conditional where it checks if vowel is index 0 first
   if(arr[0] === 'a' || arr[0] === 'e' || arr[0] === 'i' || arr[0] === 'o' || arr[0] === 'u'){
-    arr.push('yay')
-  console.log('***after adding yay',arr)
+    arr.push('yay') // addes "yay" at the end of words that start with vowels
+  // console.log('***after adding yay',arr)
 
-  arr.join()
+  arr.join() 
   
   return arr.join('')
-  } else {
+  } // second is a while loop where the word that starts with a consonant goes through until it gets to a vowel
+  else {
     let i = 0;
-    while (arr[i] !== 'a' || arr[i] !== 'e' || arr[i] !== 'i' || arr[i] !== 'o' || arr[i] !== 'u') {
-      i+=1;
-      console.log(arr[i])
-  let removedElement = arr.shift()
+    while (i+=1) {
+      // console.log(arr[i])
+  let removedElement = arr.shift() // if the letter at index 0 is a consonant, remove it and store the element in a variable
   console.log(removedElement)
 
-  
-  arr.push(removedElement)
-  console.log('***after putting at the end',arr)
-
+  arr.push(removedElement) // put the removedElement at the end of the array
+  // console.log('***after putting at the end',arr)
       if(arr[0] === 'a' || arr[0] === 'e' || arr[0] === 'i' || arr[0] === 'o' || arr[0] === 'u'){
-        break;
+        break; // if the first index is a vowel, get out of loop
       }
-
 }
-  arr.push('ay')
-  console.log('***after adding ay',arr)
-
+  arr.push('ay') // add "ay" to the end after the array leaves the while loop
+  // console.log('***after adding ay',arr)
   arr.join()
-  
   return arr.join('')
   }
 }
