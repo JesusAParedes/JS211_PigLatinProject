@@ -1,30 +1,5 @@
 'use strict';
 
-// create text variable
-let text = '';
-
-//grab form elements from index file
-let input = document.getElementById('user-input');
-console.log(input);
-let button = document.getElementById('translate');
-let output = document.getElementById('pigLatinOutput');
-let form = document.getElementById('latinForm');
-
-// stop form from submitting
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-})
-
-//store input.value into text
-input.addEventListener('keyup', (e) => {
-  text = e.target.value;
-  console.log(text);
-});
-
-
-
-
-
 // brings in the assert module for unit testing
 const assert = require('assert');
 // brings in the readline module to access the command line
@@ -34,10 +9,6 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-
-
-
 
 const pigLatin = (word) => {
   
@@ -73,11 +44,7 @@ const pigLatin = (word) => {
   return arr.join('')
 }
 }
-// Event for running pigLatin fx and putting it on page
-button.addEventListener('click', (e) => {
-  let word = pigLatin(text);
-  output.innerText = word;
-});
+
 
 
 // the first function called in the program to get an input from the user
